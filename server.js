@@ -12,5 +12,8 @@ app.use(cors())
 connectDB();
 
 app.use('/',bookRouter)
+app.use('/', (req, res) => {
+    res.send('Welcome to my backend server!');
+  })
 
 app.listen(port,()=>console.log(`Server Started on http://localhost:${port}`))
